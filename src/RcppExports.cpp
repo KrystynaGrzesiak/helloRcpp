@@ -10,6 +10,18 @@ Rcpp::Rostream<true>&  Rcpp::Rcout = Rcpp::Rcpp_cout_get();
 Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
 #endif
 
+// gcd
+int gcd(int a, int b);
+RcppExport SEXP _helloRcpp_gcd(SEXP aSEXP, SEXP bSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< int >::type a(aSEXP);
+    Rcpp::traits::input_parameter< int >::type b(bSEXP);
+    rcpp_result_gen = Rcpp::wrap(gcd(a, b));
+    return rcpp_result_gen;
+END_RCPP
+}
 // rcpp_hello
 List rcpp_hello();
 RcppExport SEXP _helloRcpp_rcpp_hello() {
@@ -22,6 +34,7 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
+    {"_helloRcpp_gcd", (DL_FUNC) &_helloRcpp_gcd, 2},
     {"_helloRcpp_rcpp_hello", (DL_FUNC) &_helloRcpp_rcpp_hello, 0},
     {NULL, NULL, 0}
 };
