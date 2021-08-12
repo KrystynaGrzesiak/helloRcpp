@@ -3,5 +3,5 @@
 <!-- badges: start -->
 
 [![R build
-status](https://github.com/jakubkala/helloRcpp/workflows/R-CMD-check/badge.svg)](https://github.com/jakubkala/helloRcpp/actions)
+status](https://github.com/KrystynaGrzesiak/helloRcpp/workflows/R-CMD-check/badge.svg)](https://github.com/KrystynaGrzesiak/helloRcpp/actions)
 <!-- badges: end -->
