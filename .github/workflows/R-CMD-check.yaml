@@ -100,8 +100,6 @@ jobs:
         shell: Rscript {0}
 
       - name: Test coverage
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
         if: github.ref == 'refs/heads/master' && env.run_covr == 'true'
         run: |
           covr::codecov()
